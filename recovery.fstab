@@ -14,13 +14,11 @@
 # limitations under the License.
 #
 
-/efs ext4 /dev/block/bootdevice/by-name/efs flags=display="EFS";backup=1
-/boot emmc /dev/block/bootdevice/by-name/boot flags=display="Boot";backup=1
-/data ext4 /dev/block/bootdevice/by-name/userdata flags=display=backup=1
-/system ext4 /dev/block/bootdevice/by-name/system flags=display="System";backup=1
-/cache ext4 /dev/block/bootdevice/by-name/cache flags=display="Cache";backup=1
-/recovery emmc /dev/block/bootdevice/by-name/recovery flags=display="Recovery";backup=1
+/boot emmc /dev/block/mmcblk0p16 flags=display="Boot";backup=1
+/data ext4 /dev/block/mmcblk0p27 flags=display=backup=1
+/system ext4 /dev/block/mmcblk0p24 flags=display="System";backup=1
+/cache ext4 /dev/block/mmcblk0p25 flags=display="Cache";backup=1
+/recovery emmc /dev/block/mmcblk0p17 flags=display="Recovery";backup=1
+/firmware-modem vfat /dev/block/mmcblk0p2 flags=display="modem";backup=1
 /external_sd vfat /dev/block/mmcblk1p1 /dev/block/mmcblk1 flags=display="Micro SDcard";storage;wipeingui;removable
-/modem /dev/block/bootdevice/by-name/apnhlos flags=display="Modem";backup=1
 /usb-otg vfat /dev/block/sda1 /dev/block/sda flags=display="USB-OTG";storage;wipeingui;removable
-
