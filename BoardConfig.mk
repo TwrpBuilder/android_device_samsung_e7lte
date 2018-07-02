@@ -14,8 +14,6 @@
 # limitations under the License.
 #
 
-TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
-TW_MAX_BRIGHTNESS := 255
 LOCAL_PATH := device/samsung/e7lte
 
 TARGET_BOARD_PLATFORM := msm8916
